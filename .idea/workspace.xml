@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2adb8e4d-3fb2-4f0d-a923-4627b3733e92" name="Changes" comment="first_commit">
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/func.py" afterDir="false" />
+    <list default="true" id="2adb8e4d-3fb2-4f0d-a923-4627b3733e92" name="Changes" comment="24.02_without_test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abs_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abs_classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_func.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +39,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python tests.Python tests in test_func.py.executor": "Run",
     "Python.classes.executor": "Run",
     "Python.func.executor": "Run",
     "Python.main.executor": "Run",
@@ -79,11 +77,20 @@
       <option name="project" value="LOCAL" />
       <updated>1740058852980</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="24.02_without_test">
+      <option name="closed" value="true" />
+      <created>1740407017457</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740407017457</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first_commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first_commit" />
+    <MESSAGE value="24.02_without_test" />
+    <option name="LAST_COMMIT_MESSAGE" value="24.02_without_test" />
   </component>
 </project>
