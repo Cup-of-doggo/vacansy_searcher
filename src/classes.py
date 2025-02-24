@@ -62,16 +62,13 @@ class Vacansy(BaseClass, HH):
 
 
 class VacansyLoadJson(VacansyLoadAbs, HH):
+    """Выводит информацию в файл """
     vacansies:list
     def __init__(self,vacansies):
         self.vacansies = vacansies
         super().__init__()
 
 
-    def json_load(self, keyword=None):
+    def json_load(self, info: list):
         with open(os.path.abspath('json_file'),'a', encoding='utf-8') as file:
-            file.write(f'{HH(Vacansy).load_vacancies(keyword)}')
-
-
-#print(VacansyLoadJson(Vacansy).json_load('Python'))
-
+            file.write(f'{info}')

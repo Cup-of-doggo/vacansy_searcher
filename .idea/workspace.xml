@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2adb8e4d-3fb2-4f0d-a923-4627b3733e92" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vacansy_searcher.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/json_file" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/abs_classes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
+    <list default="true" id="2adb8e4d-3fb2-4f0d-a923-4627b3733e92" name="Changes" comment="first_commit">
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/func.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/abs_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abs_classes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -46,8 +43,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.classes.executor": "Run",
+    "Python.func.executor": "Run",
+    "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "develop",
     "last_opened_file_path": "C:/Users/gorde/PycharmProjects/vacansy_searcher"
   }
 }]]></component>
@@ -72,6 +71,19 @@
       <option name="presentableId" value="Default" />
       <updated>1739817076288</updated>
     </task>
+    <task id="LOCAL-00001" summary="first_commit">
+      <option name="closed" value="true" />
+      <created>1740058852980</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740058852980</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first_commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first_commit" />
   </component>
 </project>
