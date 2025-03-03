@@ -28,7 +28,7 @@ class HH(Parser):
             return vacancies
 
 
-class Vacansy(BaseClass, HH):
+class Vacansy(BaseClass):
     """
         Класс для работы с вакансиями
         """
@@ -44,7 +44,6 @@ class Vacansy(BaseClass, HH):
         self.description = description
 
 
-
     def salary(self):
         if self.__salary:
             return self.__salary
@@ -52,9 +51,18 @@ class Vacansy(BaseClass, HH):
             return self.__salary == 0
 
 
-    def comparison(self, other):
+    def __eq__(self, other):
         if self.__salary > other.__salary:
             return self.salary
+        elif self.__salary == other.__salary:
+            return 'Зарплаты равны'
+        else:
+            return other.__salary
+
+
+    def __le__(self,other):
+        if self.__salary < other.__salary:
+            return other.salary
         elif self.__salary == other.__salary:
             return 'Зарплаты равны'
         else:
