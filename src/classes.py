@@ -11,38 +11,45 @@ class HH(Parser):
     """
 
     def __init__(self, file_worker):
-        self.url = 'https://api.hh.ru/vacancies'
-        self.headers = {'User-Agent': 'HH-User-Agent'}
-        self.params = {'text': '', 'page': 0, 'per_page': 100}
+        self.__url = 'https://api.hh.ru/vacancies'
+        self.__headers = {'User-Agent': 'HH-User-Agent'}
+        self.__params = {'text': '', 'page': 0, 'per_page': 100}
         self.vacancies = []
-        #super().__init__(file_worker)
+        super().__init__(file_worker)
 
 
     def load_vacancies(self, keyword):
-        self.params['text'] = keyword
-        while self.params.get('page') != 20:
-            response = requests.get(self.url, headers=self.headers, params=self.params)
-            vacancies = response.json()['items']
-            self.vacancies.extend(vacancies)
-            self.params['page'] += 1
-            return vacancies
+        self.__params['text'] = keyword
+        try:
+            while self.params.get('page') != 20:
+                response = requests.get(self.__url, headers=self.__headers, params=self.__params)
+                vacancies = response.json()['items']
+                self.vacancies.extend(vacancies)
+                self.__params['page'] += 1
+                return vacancies
+        except Exception as err:
+            return f'Произошла ошибка при подключении, текст ошибки:{err}'
+
+
 
 
 class Vacansy(BaseClass):
     """
         Класс для работы с вакансиями
         """
+    __slots__ = ('name', '_link', '__salary', 'description')
 
     name: str
     link: str
     salary: int
     description: str
+
     def __init__(self, name, link, salary, description):
         self.name = name
         self._link = link
         self.__salary = salary
         self.description = description
-
+        super().__init__()
 
     def salary(self):
         if self.__salary:
@@ -77,6 +84,11 @@ class VacansyLoadJson(VacansyLoadAbs, HH):
         super().__init__()
 
 
-    def json_load(self, info: list):
-        with open(os.path.abspath('json_file'),'a', encoding='utf-8') as file:
-            file.write(f'{info}')
+    def json_load(information: list):
+        with open(os.path.abspath('json_file'),'a+', encoding='utf-8') as file:
+            for info in information:
+                file.write(f'{info}\n')
+
+
+    def file_delete(filename: str):
+        os.remove(os.path.abspath(filename))
