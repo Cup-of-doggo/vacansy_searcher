@@ -1,13 +1,13 @@
-from src.classes import Vacansy, VacansyLoadJson
+from src.classes import Vacansy, VacansyLoadJson, HH
 
 some_vacansy = Vacansy('Сварщик', 'htttp/tipo_ssilka/chto_to.ru',50000,'Варить металл')
 other_vacansy = Vacansy('Грузчик','htttp/tipo_ssilka/chto_to.ru',60000,'Грузить металл')
 
 def test_Vacansy_init():
-    assert some_vacansy.name == "Сварщик"
+    assert some_vacansy._name == "Сварщик"
     assert some_vacansy._link == "htttp/tipo_ssilka/chto_to.ru"
     assert some_vacansy.salary() == 50000
-    assert some_vacansy.description == 'Варить металл'
+    assert some_vacansy._description == 'Варить металл'
 
 
 def test_Vacansy_salary_comparison():
@@ -15,5 +15,7 @@ def test_Vacansy_salary_comparison():
 
 
 def test_Vacansy_load_json():
-    assert VacansyLoadJson.json_load('test_text') == None
-    assert VacansyLoadJson.file_delete('json_file') == None
+    assert VacansyLoadJson(Vacansy).json_load(['test_text']) == None
+    assert VacansyLoadJson(Vacansy).file_read('json_file') == None
+    assert VacansyLoadJson(Vacansy).information_delete('json_file') == None
+    assert VacansyLoadJson(Vacansy).file_delete('json_file') == None

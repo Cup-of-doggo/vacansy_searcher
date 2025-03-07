@@ -9,7 +9,7 @@ def user_interaction():
     filtred_by_salary = []
 
     search_query = input("Введите поисковый запрос: ")
-    vacansies = HH(Vacansy).load_vacancies(search_query)
+    vacansies = HH(Vacansy)._load_vacancies(search_query)
     for one_vacansy in vacansies:
         if one_vacansy['salary'] is not None:
             filtred_vacansies.append(one_vacansy)

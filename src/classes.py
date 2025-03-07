@@ -18,7 +18,7 @@ class HH(Parser):
         super().__init__(file_worker)
 
 
-    def load_vacancies(self, keyword):
+    def _load_vacancies(self, keyword):
         self.__params['text'] = keyword
         try:
             while self.params.get('page') != 20:
@@ -37,7 +37,7 @@ class Vacansy(BaseClass):
     """
         Класс для работы с вакансиями
         """
-    __slots__ = ('name', '_link', '__salary', 'description')
+    __slots__ = ('_name', '_link', '__salary', '_description')
 
     name: str
     link: str
@@ -45,11 +45,26 @@ class Vacansy(BaseClass):
     description: str
 
     def __init__(self, name, link, salary, description):
-        self.name = name
+        self._name = name
         self._link = link
         self.__salary = salary
-        self.description = description
+        self._description = description
         super().__init__()
+
+    @property
+    def name(self):
+        return self._name
+
+
+    @property
+    def link(self):
+        return self._link
+
+
+    @property
+    def description(self):
+        return self._description
+
 
     def salary(self):
         if self.__salary:
@@ -84,11 +99,22 @@ class VacansyLoadJson(VacansyLoadAbs, HH):
         super().__init__()
 
 
-    def json_load(information: list):
+    def json_load(self, information: list):
         with open(os.path.abspath('json_file'),'a+', encoding='utf-8') as file:
             for info in information:
                 file.write(f'{info}\n')
 
 
-    def file_delete(filename: str):
+    def file_delete(self, filename: str):
         os.remove(os.path.abspath(filename))
+
+
+    def file_read(self, filename):
+        with open(os.path.abspath(filename), 'r+', encoding='utf-8') as file:
+            print(file.read())
+            file.close()
+
+
+    def information_delete(self, filename):
+        with open(os.path.abspath(filename), 'r+', encoding='utf-8') as file:
+            file.truncate(0)
