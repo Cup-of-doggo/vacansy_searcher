@@ -47,7 +47,7 @@ class Vacansy(BaseClass):
     def __init__(self, name, link, salary, description):
         self._name = name
         self._link = link
-        self.__salary = salary
+        self.__salary = self.validate_salary(salary)
         self._description = description
         super().__init__()
 
@@ -67,10 +67,18 @@ class Vacansy(BaseClass):
 
 
     def salary(self):
-        if self.__salary:
-            return self.__salary
-        else:
-            return self.__salary == 0
+        return self.__salary
+
+
+    @staticmethod
+    def validate_salary(value: int) -> int:
+        """Валидация зарплаты"""
+        if not isinstance(value, int):
+            raise ValueError("Зарплата должна быть целым числом")
+        if value < 0:
+            raise ValueError("Зарплата не может быть отрицательной")
+        return value
+
 
 
     def __eq__(self, other):

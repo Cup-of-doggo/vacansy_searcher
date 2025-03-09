@@ -8,6 +8,7 @@ def test_Vacansy_init():
     assert some_vacansy._link == "htttp/tipo_ssilka/chto_to.ru"
     assert some_vacansy.salary() == 50000
     assert some_vacansy._description == 'Варить металл'
+    assert some_vacansy.validate_salary(some_vacansy.salary()) == 50000
 
 
 def test_Vacansy_salary_comparison():

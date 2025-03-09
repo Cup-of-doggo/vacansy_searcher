@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2adb8e4d-3fb2-4f0d-a923-4627b3733e92" name="Changes" comment="04_03_commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/abs_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/abs_classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/func.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/func.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_func.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_func.py" afterDir="false" />
-    </list>
+    <list default="true" id="2adb8e4d-3fb2-4f0d-a923-4627b3733e92" name="Changes" comment="07_03_commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741106693898</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="07_03_commit">
+      <option name="closed" value="true" />
+      <created>1741349998871</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1741349998871</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -126,6 +127,7 @@
     <MESSAGE value="24.02_without_test" />
     <MESSAGE value="03_03_without_test" />
     <MESSAGE value="04_03_commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="04_03_commit" />
+    <MESSAGE value="07_03_commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="07_03_commit" />
   </component>
 </project>
